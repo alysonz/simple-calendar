@@ -6,14 +6,15 @@ var month2 = moment(today.add(1, 'month'));
 var month3 = moment(today.add(1, 'month'));
 
 $('.calendar1 .title').text(months[month1.month()]);
-$('.calendar2 .title').text(months[month1.month()]);
-$('.calendar3 .title').text(months[month1.month()]);
+$('.calendar2 .title').text(months[month2.month()]);
+$('.calendar3 .title').text(months[month3.month()]);
 
 month1Days = month1.endOf('month').date();
 month1WeekOffset = month1.startOf('month').day();
 month1.startOf('month');
 for (var i = 0; i < month1Days; i++) {
   var week = Math.ceil((month1WeekOffset + month1.date())/7);
+  console.log(week, month1.date(), month1WeekOffset)
   $(`.calendar1 .week${week} .day${month1.day()}`).text(`${month1.date()}`);
   month1.add(1, 'day');
 }
