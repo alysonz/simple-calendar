@@ -1,4 +1,9 @@
-#calendar {
+.calendars {
+  display: flex;
+  justify-content: space-around;
+}
+
+.calendar {
   width: 200px;
   height: 200px;
   border: 1px solid black;
@@ -8,9 +13,14 @@
   flex-direction: column;
 }
 
+.title {
+  width: 100%;
+  text-align: center;
+}
+
 .week{
   display: flex;
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   height: 33.33vh
 }
 
@@ -18,12 +28,14 @@
   display: flex;
   border-left: 1px solid black;
   width: 28.6vw;
+  align-items: center;
+  justify-content: center;
 }
 
-#week6 {
+.week6 {
   border-bottom: none;
 }
 
-.day1{
+.day0{
   border-left: none;
 }
